@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Portfolio d'armelle gombault</title>
+
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
+<!-- The JavaScript -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>		
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript">
+		//FONCTION SCROLL TO
+            $(function() {
+                $('ul#nav a').bind('click',function(event){
+                    var $anchor = $(this);
+                    
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top
+                    }, 1400,'easeInOutExpo');
+                    /*
+                    if you don't want to use the easing effects:
+                    $('html, body').stop().animate({
+                        scrollTop: $($anchor.attr('href')).offset().top
+                    }, 1000);
+                    */
+                    event.preventDefault();
+                });
+            });
+			
+			//FONTION RETOUR HAUT DE PAGE
+			var timeOut;
+			function backtotop() {
+				if (document.body.scrollTop!==0 || document.documentElement.scrollTop!==0){
+					window.scrollBy(0,-50);
+					timeOut=setTimeout('backtotop()',5);
+					}
+				else clearTimeout(timeOut);
+				}
+        </script>
+</head>
+
+<body>
+<!--debut du menu-->
+<ul id="nav">
+	<li><a href="#print">Print</a></li>
+    <li><a href="#illustration">Illustration</a></li>
+    <li><a href="#contact">Contact</a></li>
+
+</ul><!--fin du menu-->
+<!--debut de la section print-->
+<div class="section black" id="print">
+	<h2>Print</h2>
+    <p>Thalassius vero ea tempestate praefectus praetorio praesens ipse quoque adrogantis ingenii, considerans incitationem eius ad multorum augeri discrimina, non maturitate vel consiliis mitigabat, ut aliquotiens celsae potestates iras principum molliverunt, sed adversando iurgandoque cum</p>
+
+</div><!--fin de la section print-->
+<!--debut de la section illustration-->
+<div class="section white" id="illustration">
+	<h2>Illustration</h2>
+    <p>Quibus occurrere bene pertinax miles explicatis ordinibus parans hastisque feriens scuta qui habitus iram pugnantium concitat et dolorem proximos iam gestu terrebat sed eum in certamen alacriter consurgentem revocavere ductores rati intempestivum anceps subire certamen cum haut longe muri distarent, quorum tutela securitas poterat in solido locari cunctorum.</p>
+
+</div><!--fin de la section illustration-->
+<!--debut de la section contact-->
+<div class="section black" id="contact">
+	<h2>Contactez-moi</h2>
+    <form action="js/courriel.php" method="post">
+	<fieldset class="formContact">
+    	<ul>
+        	<li><label>Prénom:</label></li>
+            <li><input type="text" id="prenom" name="prenom" size="40" tabindex="1"/></li>
+            <li><label>Nom:</label></li>
+            <li><input type="text" id="nom" name="nom" size="40" tabindex="2"/></li>
+            <li><label>Email:</label></li>
+            <li><input type="text" id="mail" name="mail" size="40" tabindex="3"/></li>
+        </ul>
+    </fieldset>
+    <fieldset class="formContact right">
+    	<ul>
+        	<li><label>Objet</label></li>
+            <li><input type="text" id="objet" name="objet" size="40" tabindex="4"/></li>
+            <li><label>Message</label></li>
+            <li><textarea name="message" id="message" cols="37" rows="10" tabindex="5"></textarea></li>
+            <li><input type="submit" id="envoyer" name="envoyer" value="Envoyer"/></li>
+        </ul>
+    </fieldset>
+	</form>
+</div><!--fin de la section contact-->
+<!--bouton retour haut de page-->
+<a href="#nav" id="retour" onclick="backtotop();return false;"></a>
+
+</body>
+</html>

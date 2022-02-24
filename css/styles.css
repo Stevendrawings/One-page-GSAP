@@ -1,0 +1,150 @@
+@charset "utf-8";
+/*selecteur universel qui parle à TOUTES (ALL) les balises et donc on enlève les marges intérieures et extérieures à toutes les balises, ainsi que les bordures aux elements cliquables*/
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+}
+body {
+	background-color: #000;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 62.5%;
+}
+/*on enlève les puces par défaut*/
+li {
+	list-style-type: none;
+}
+/*on enlève le soulignement des liens par défaut*/	
+a {
+	text-decoration: none;
+}
+/*on fixe le menu pour qu'il reste toujours en haut */
+#nav{
+	background-color:#000;
+	width:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	line-height:150px;
+	border-bottom:1px solid #e1e1e1;
+	text-align:center;
+	}
+#nav li{
+	display:inline;
+	margin:20px;
+	}
+#nav li a{
+	color:#fff;
+	font-size:3.4em;
+	}
+#nav li a:hover{
+	color:#F00;
+	
+	}
+.section{
+	width:90%;
+	padding:0 5%;
+	float:left;
+	height:3000px;
+	}
+.section h2{
+	margin:200px 0 50px 0;
+	color:#666;
+	font-size:3.6em;
+	font-style:italic;
+	}
+.section p{
+	font-size:3em;
+	width:50%;
+	}
+/*section print et contact*/
+.black{
+	color:#fff;
+	background:url(../images/black_vert.jpg) repeat-x bottom left #000;
+	}
+.white{
+	color:#000;
+	background:url(../images/white_vert.jpg) repeat-x bottom left #fff;
+	}
+/*bouton retour haut de page*/
+#retour{
+	width:40px;
+	height:40px;
+	position:fixed;
+	bottom:50px;
+	right:25px;
+	background:url(../images/back.png) no-repeat center center #fff;
+	background-size:40px 40px;
+	}
+/*STYLES CONTACT*/
+.formContact{
+	float:left;
+	width:30%;
+	}
+.right{
+	margin-left:50px;
+	}
+.formContact label{
+	font-size:2em;
+	font-style:italic;
+	color:#fff;
+	}
+.formContact li{
+	margin-bottom:10px;
+	}
+.formContact input[type="text"]{
+	border:1px solid #CCC;
+	padding:10px;
+	}
+.formContact input[type="submit"]{
+	padding:10px;
+	color:#F00;
+	background-color:#FFF;
+	font-size:1.5em;
+	text-transform:uppercase;
+	border:1px solid red;
+	}
+.formContact input[type="submit"]:hover{
+	color:#fff;
+	background-color:#F00;
+	}
+.formContact input[type="submit"]:focus{
+	color:#fff;
+	background-color:#F00;
+	border:1px solid white;
+	}
+/*#formulaire{
+	width:80%;
+	margin:0 10%;
+	
+	}
+.formContact{
+	width:30%;
+	float:left;
+	
+	}
+.right{
+	margin-left:50px;
+	}
+.formContact li{
+	margin-bottom:10px;
+	}
+.formContact label{
+	font-size:2em;
+	font-style:italic;
+	}
+.formContact input[type="text"]{
+	border:1px solid #e1e1e1;
+	padding:10px;
+	}
+.formContact input[type="submit"]{
+	border:1px solid #e1e1e1;
+	padding:10px;
+	background-color:#fff;
+	color:#000;
+	border-radius:5px;
+	}*/
+
+
+
